@@ -7,6 +7,8 @@
  * @package spanner
  */
 
+if ( defined( 'JETPACK_VERSION' ) ) :
+
 /**
  * Jetpack setup function.
  *
@@ -52,3 +54,5 @@ function spanner_infinite_scroll_render() {
 		endif;
 	}
 }
+
+endif;
