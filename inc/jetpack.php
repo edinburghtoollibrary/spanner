@@ -20,8 +20,8 @@ function spanner_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'spanner_infinite_scroll_render',
-		'footer'    => 'page',
+		'render' => 'spanner_infinite_scroll_render',
+		'footer' => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -31,11 +31,11 @@ function spanner_jetpack_setup() {
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
 			'stylesheet' => 'spanner-style',
-			'date'       => '.posted-on',
+			'date' => '.posted-on',
 			'categories' => '.cat-links',
-			'tags'       => '.tags-links',
-			'author'     => '.byline',
-			'comment'    => '.comments-link',
+			'tags' => '.tags-links',
+			'author' => '.byline',
+			'comment' => '.comments-link',
 		),
 	) );
 }

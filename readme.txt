@@ -1,5 +1,6 @@
 === spanner ===
 
+Author: tbartels
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
@@ -29,10 +30,14 @@ spanner includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - 2017-08-09 =
 * Initial release
 
 == Credits ==
 
 * Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Shoelace https://shoelace.style/, (C) 2017 A Beautiful Site, LLC, [MIT](http://opensource.org/licenses/MIT)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* Bones http://themble.com/bones/
+* A11yall https://wordpress.org/themes/a11yall/
+* html5blank https://github.com/toddmotto/html5blank
