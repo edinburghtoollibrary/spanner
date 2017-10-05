@@ -11,6 +11,8 @@
     "theme"
   ],
   "scripts": {
+    "build-css": "postcss src/css/styles.css -u postcss-import -u autoprefixer -d css/",
+		"build": "npm run build-css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +24,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "postcss-cli": "^4.1.0",
+    "postcss-import": "^10.0.0",
     "shoelace-css": "^1.0.0-beta10"
   }
 }

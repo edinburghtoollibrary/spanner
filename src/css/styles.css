@@ -1,0 +1,23 @@
+/* Reset */
+@import url('shoelace-css/source/css/normalize.css');
+
+/* Shoelace variables and base styles */
+@import url('shoelace-css/source/css/variables.css');
+@import url('shoelace-css/source/css/content.css');
+
+/* Components */
+@import url('shoelace-css/source/css/alerts.css');
+@import url('shoelace-css/source/css/badges.css');
+@import url('shoelace-css/source/css/buttons.css');
+@import url('shoelace-css/source/css/dropdowns.css');
+@import url('shoelace-css/source/css/forms.css');
+@import url('shoelace-css/source/css/loaders.css');
+@import url('shoelace-css/source/css/switches.css');
+@import url('shoelace-css/source/css/tabs.css');
+@import url('shoelace-css/source/css/tables.css');
+@import url('shoelace-css/source/css/utilities.css');
+
+/* Customizing shoelace */
+@import url('theme-variables.css');
+
+@import url('theme.css');
