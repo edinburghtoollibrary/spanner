@@ -1,0 +1,13 @@
+.site-header {
+	background-color: var(--color-primary);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.site-title {
+	margin: 0;
+}
+.site-title .custom-logo {
+	max-width: 125px;
+	margin: .5rem;
+}
