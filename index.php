@@ -12,7 +12,8 @@
  * @package spanner
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -20,12 +21,14 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			if ( is_home() && ! is_front_page() ) :
+				?>
 				<header>
+					<?php the_header_image_tag(); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<?php get_search_form(); ?>
 				</header>
-
-			<?php
+				<?php
 			endif;
 
 			// Start the Loop
@@ -45,11 +48,11 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

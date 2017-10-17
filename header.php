@@ -9,8 +9,7 @@
  * @package spanner
  */
 
-?>
-<!doctype html>
+?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -22,33 +21,27 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'spanner' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
+		<nav id="site-navigation" class="main-navigation dropdown">
+			<button class="menu-toggle dropdown-trigger" aria-controls="primary-menu" aria-expanded="false">
+				<?php esc_html_e( 'Menu', 'spanner' ); ?>
+			</button>
+			<div class="dropdown-menu">
+				<?php get_sidebar( 'site-navigation' ); ?>
+			</div>
 		</nav><!-- #site-navigation -->
+
+		<?php $title_tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
+		<<?php echo $title_tag; ?> class="site-branding site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php has_custom_logo() ? the_custom_logo() : bloginfo( 'name' ); ?>
+		</a></<?php echo $title_tag; ?>>
+
+		<?php $description = get_bloginfo( 'description', 'display' ); ?>
+		<?php if ( $description || is_customize_preview() ) : ?>
+			<div class="site-branding site-description"><?php echo $description; /* WPCS: xss ok. */ ?></div>
+		<?php endif; ?>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
