@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "build-css": "postcss src/css/styles.css -u postcss-import -u autoprefixer -d css/",
+		"build-css-watch": "npm run build-css -- -w",
 		"build": "npm run build-css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

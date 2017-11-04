@@ -22,26 +22,32 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
+	<!-- a href="#menu" class="menu-link">☰</a -->
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation dropdown">
-			<button class="menu-toggle dropdown-trigger" aria-controls="primary-menu" aria-expanded="false">
-				<?php esc_html_e( 'Menu', 'spanner' ); ?>
-			</button>
-			<div class="dropdown-menu">
-				<?php get_sidebar( 'site-navigation' ); ?>
-			</div>
-		</nav><!-- #site-navigation -->
-
 		<?php $title_tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
-		<<?php echo $title_tag; ?> class="site-branding site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<?php has_custom_logo() ? the_custom_logo() : bloginfo( 'name' ); ?>
-		</a></<?php echo $title_tag; ?>>
+		<<?php echo $title_tag; ?> class="site-branding site-title">
+			<?php if ( has_custom_logo() ) : ?>
+				<?php the_custom_logo(); ?>
+			<?php else : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php bloginfo( 'name' ); ?>
+				</a>
+			<?php endif; ?>
+		</<?php echo $title_tag; ?>>
 
 		<?php $description = get_bloginfo( 'description', 'display' ); ?>
 		<?php if ( $description || is_customize_preview() ) : ?>
 			<div class="site-branding site-description"><?php echo $description; /* WPCS: xss ok. */ ?></div>
 		<?php endif; ?>
 
+		<nav id="site-navigation" class="main-navigation">
+			<button class="button-link menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php esc_html_e( '☰', 'spanner' ); ?>
+			</button>
+			<div class="">
+				<?php get_sidebar( 'site-navigation' ); ?>
+			</div>
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

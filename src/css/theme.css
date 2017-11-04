@@ -1,8 +1,38 @@
 .site-header {
+	position: fixed;
+	left: -286px;
+	z-index: 9;
+	transition: left .33s;
 	background-color: var(--color-primary);
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+}
+body.is-menu-active .site-header {
+	left: 0;
+}
+body.is-menu-active .site-content {
+	left: 286px;
+}
+.main-navigation a {
+	color: var(--color-black);
+}
+.main-navigation .menu-toggle {
+	position: absolute;
+	top: 0;
+	right: -40px;
+	color: var(--color-black);
+	background-color: var(--color-primary);
+	text-rendering: geometricPrecision;
+}
+.main-navigation .menu-toggle:hover {
+	color: var(--color-white);
+	background-color: var(--color-primary);
+}
+.main-navigation ul.menu {
+	padding: 0;
+}
+.main-navigation .menu li {
+	list-style: none;
 }
 .site-title {
 	margin: 0;
@@ -10,4 +40,12 @@
 .site-title .custom-logo {
 	max-width: 125px;
 	margin: .5rem;
+}
+.site-content {
+	position: relative;
+	left: 0;
+	transition: left .33s;
+	max-width: calc(100% - 20px);
+	margin: 0 auto;
+	width: var(--breakpoint-lg);
 }

@@ -1,5 +1,6 @@
 /* Reset */
-@import url('shoelace-css/source/css/normalize.css');
+/*@import url('shoelace-css/source/css/normalize.css');/**/
+@import url('reboot.css');
 
 /* Shoelace variables and base styles */
 @import url('shoelace-css/source/css/variables.css');
