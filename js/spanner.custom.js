@@ -9,8 +9,8 @@
 	}
 
 	handleClickMenuToggle = function (evt) {
-		var isMenuTog = evt.target.classList.contains('menu-toggle'), // click on toggle button
-			isOffMenu = evt.target.closest('.entry-content') !== null; // click outside of the menu
+		var isMenuTog = evt.target.classList.contains('menu-toggle'), // a click on toggle button
+			isOffMenu = evt.target.closest('.site-main') !== null; // a click outside of the menu
 
 		if (isMenuTog || (hasMenuOpen() && isOffMenu)) {
 			bodyClass.toggle('is-menu-active');
