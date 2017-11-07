@@ -20,9 +20,9 @@ function spanner_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'spanner_custom_header_args', array(
 		'default-image' => '',
 		'default-text-color' => '000000',
-		'width' => 1000,
-		'height' => 250,
-		'flex-height' => true,
+		'width' => 105,
+		'height' => 105,
+		'flex-height' => false,
 		'wp-head-callback' => 'spanner_header_style',
 	) ) );
 }
@@ -62,3 +62,15 @@ if ( ! function_exists( 'spanner_header_style' ) ) :
 		<?php
 	}
 endif;
+
+add_filter( 'get_header_image_tag', function ( $html, $header, $attr ) {
+	// force our way!
+	$attr['height'] = 105;
+	$attr['width'] = 105;
+
+    foreach ( $attr as $name => $value ) {
+        $atts[] = $name . '="' . $value . '"';
+    }
+ 
+    return sprintf( '<img %s>', join( ' ', $atts ) );
+}, 10, 3 );
