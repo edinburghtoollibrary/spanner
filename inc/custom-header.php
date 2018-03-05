@@ -20,8 +20,8 @@ function spanner_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'spanner_custom_header_args', array(
 		'default-image' => '',
 		'default-text-color' => '000000',
-		'width' => 105,
-		'height' => 105,
+		'width' => 210,
+		'height' => 210,
 		'flex-height' => false,
 		'wp-head-callback' => 'spanner_header_style',
 	) ) );
