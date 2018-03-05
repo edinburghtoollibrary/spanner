@@ -21,4 +21,5 @@
 /* Customizing shoelace */
 @import url('theme-variables.css');
 
+@import url('wp-core.css');
 @import url('theme.css');
