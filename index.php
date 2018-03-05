@@ -25,7 +25,7 @@ get_header();
 				?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					<?php the_header_image_tag( array( 'class' => 'header-image', 'width' => 105, 'height' => 105 ) ); ?>
+					<?php the_header_image_tag(); ?>
 					<?php get_search_form(); ?>
 				</header>
 				<?php

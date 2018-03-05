@@ -23,31 +23,31 @@
 <div id="page" class="site">
 
 	<!-- a href="#menu" class="menu-link">☰</a -->
-	<header id="masthead" class="site-header">
-		<?php $title_tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
-		<<?php echo $title_tag; ?> class="site-branding site-title">
-			<?php if ( has_custom_logo() ) : ?>
-				<?php the_custom_logo(); ?>
-			<?php else : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<?php bloginfo( 'name' ); ?>
-				</a>
-			<?php endif; ?>
-		</<?php echo $title_tag; ?>>
-
-		<?php $description = get_bloginfo( 'description', 'display' ); ?>
-		<?php if ( $description || is_customize_preview() ) : ?>
-			<div class="site-branding site-description"><?php echo $description; /* WPCS: xss ok. */ ?></div>
-		<?php endif; ?>
-
-		<nav id="site-navigation" class="main-navigation">
+		<header id="masthead" class="site-header">
 			<button class="button-link menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<?php esc_html_e( '☰', 'spanner' ); ?>
 			</button>
-			<div class="">
-				<?php get_sidebar( 'site-navigation' ); ?>
-			</div>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+			<?php $title_tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
+			<<?php echo $title_tag; ?> class="site-branding site-title">
+				<?php if ( has_custom_logo() ) : ?>
+					<?php the_custom_logo(); ?>
+				<?php else : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+					</a>
+				<?php endif; ?>
+			</<?php echo $title_tag; ?>>
+
+			<?php $description = get_bloginfo( 'description', 'display' ); ?>
+			<?php if ( $description || is_customize_preview() ) : ?>
+				<div class="site-branding site-description"><span class="site-description-content"><?php echo $description; /* WPCS: xss ok. */ ?></span></div>
+			<?php endif; ?>
+
+			<nav id="site-navigation" class="main-navigation">
+				<div class="">
+					<?php get_sidebar( 'site-navigation' ); ?>
+				</div>
+			</nav><!-- #site-navigation -->
+		</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
