@@ -20,6 +20,7 @@
 	--color-tfl: #ceb779;
 
 	--color-primary: var(--color-home);
+
 /*
 	--color-white: white;
 	--color-navy: #001f3f;
@@ -41,4 +42,6 @@
 */
 
 	--component-border-radius: 0;
+	--rail-width: 100px;
+	--rail-width-mobile: 250px;
 }
