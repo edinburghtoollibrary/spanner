@@ -14,6 +14,7 @@
     "build-css": "postcss src/css/styles.css -u postcss-import -u autoprefixer -d css/",
     "build-css-watch": "npm run build-css -- -w",
     "build": "npm run build-css",
+		"bundle": "(cd .. && zip -r9 spanner/spanner-theme.zip spanner/ -x \\*node_modules\\* -x \\*.git\\* -x \\*spanner/src\\* -x \\*.zip\\*)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
