@@ -68,16 +68,16 @@ add_filter( 'get_header_image_tag', function ( $html, $header, $attr ) {
 	$attr['height'] = 105;
 	$attr['width'] = 105;
 
-    foreach ( $attr as $name => $value ) {
-        $atts[] = $name . '="' . $value . '"';
-    }
- 
-    return sprintf( '<img %s>', join( ' ', $atts ) );
+	foreach ( $attr as $name => $value ) {
+		$atts[] = $name . '="' . $value . '"';
+	}
+
+	return sprintf( '<img %s>', join( ' ', $atts ) );
 }, 10, 3 );
 
 add_filter( 'wp_head', function () {
 	$custom_colors = get_post_custom_values( 'etl_page_primary_color' );
 	if ( ! empty( $custom_colors ) ) {
-		?><style>.site { --color-primary: <?php echo reset( $custom_colors ); ?> }</style><?php
+		?><style>:root { --color-primary: <?php echo reset( $custom_colors ); ?> }</style><?php
 	}
 } );
