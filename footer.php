@@ -14,7 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<?php wp_nav_menu( array( 'menu' => 'site-footer' ) ); ?>
 		<div class="site-info">
+			<?php printf( __('© 2017 %s','spanner' ), get_bloginfo( 'name' ) ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

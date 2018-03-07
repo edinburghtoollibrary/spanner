@@ -18,20 +18,6 @@
 		}
 	};
 
-	// TODO
-	handleScrollMenuToggle = function (evt) {
-		if (hasMenuOpen()) {
-			if (evt.type === 'touchmove') {
-				console.log( evt );
-				//console.log( 'client', evt.changedTouches[0].clientX, evt.changedTouches[0].clientY );
-			} else if (evt.type === 'scroll') {
-				console.log( evt );
-			}
-			//bodyClass.toggle('is-menu-active');
-		}
-	};
-
 	document.body.addEventListener('click', handleClickMenuToggle);
-	//window.addEventListener('scroll', handleScrollMenuToggle);
-	//window.addEventListener('touchmove', handleScrollMenuToggle);
+	document.body.addEventListener('touchstart', handleClickMenuToggle);
 })();

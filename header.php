@@ -44,9 +44,7 @@
 			<?php endif; ?>
 
 			<nav id="site-navigation" class="main-navigation">
-				<div class="">
-					<?php get_sidebar( 'site-navigation' ); ?>
-				</div>
+				<?php get_sidebar( 'site-navigation' ); ?>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
 

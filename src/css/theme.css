@@ -1,5 +1,6 @@
 .page .site-content {
 	font-size: 1.55rem;
+	min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +27,7 @@ body.is-menu-active .site-header {
 	overflow: scroll;
 	max-height: 100%;
 }
+body.is-menu-active .site-footer,
 body.is-menu-active .site-content {
 	left: var(--rail-width-mobile);
 }
@@ -94,13 +96,14 @@ body.is-menu-active .site-header .menu-toggle:before {
 	max-width: 125px;
 	margin: .5rem 0;
 }
+.site-footer,
 .site-content {
 	position: relative;
 	left: 0;
 	transition: .33s left;
 	max-width: calc(100% - 20px);
-	margin: 0 auto;
 	width: var(--breakpoint-lg);
+	margin: 0 auto;
 }
 
 .entry-header {
@@ -110,6 +113,31 @@ body.is-menu-active .site-header .menu-toggle:before {
 .home .entry-header .entry-title,
 .entry-header .search-form {
 	display: none;
+}
+
+.site-footer {
+	background-color: var(--color-primary);
+	margin-top: 2rem;
+	font-size: .6em;
+	font-weight: bolder;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.site-footer .menu {
+	margin: 0;
+	padding: .5em .75em;
+}
+.site-footer .menu-item {
+	display: inline-block;
+}
+.site-footer .menu-item a {
+	color: var(--color-black);
+	display: inline-block;
+	padding: .75em;
+}
+.site-footer .site-info {
+	padding: 1.25em 1.5em;
 }
 
 @media only screen and (max-width: 699px) {
@@ -207,6 +235,8 @@ body.is-menu-active .site-header .menu-toggle:before {
 	body.is-menu-active .site-header .menu-toggle:hover {
 		color: var(--color-primary);
 	}
+	body.is-menu-active .site-footer,
+	body .site-footer,
 	body.is-menu-active .site-content,
 	body .site-content {
 		left: 0;
@@ -288,5 +318,8 @@ body.is-menu-active .site-header .menu-toggle:before {
 	}
 	.main-navigation .menu-outreach-container {
 		font-size: 1.4em;
+	}
+	.site-footer {
+		font-size: .8em;
 	}
 }
