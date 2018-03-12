@@ -12,7 +12,8 @@ function spanner_scripts() {
 	#wp_enqueue_style( 'font-google-palanquin', 'https://fonts.googleapis.com/css?family=Palanquin:300,700' );
 	#wp_enqueue_style( 'font-google-yantramanav', 'https://fonts.googleapis.com/css?family=Yantramanav:300,700' );
 
-	wp_enqueue_style( 'spanner-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'spanner-styles', path_join( $template_uri, 'css/styles.css' ) );
+	wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'theme-styles', path_join( $style_uri, 'css/styles.css' ) );
 
 	//wp_enqueue_script( 'spanner-navigation',

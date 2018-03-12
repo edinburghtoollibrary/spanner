@@ -3,7 +3,7 @@
   "description": "Edinburgh Tool Library -- Spanner Theme for Wordpress ===",
   "homepage": "https://github.com/edinburghtoollibrary/spanner#readme",
   "author": "Thomas Bartels",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "GPL-2.0",
   "main": "style.css",
   "keywords": [
@@ -14,7 +14,8 @@
     "build-css": "postcss src/css/styles.css -u postcss-import -u autoprefixer -d css/",
     "build-css-watch": "npm run build-css -- -w",
     "build": "npm run build-css",
-		"bundle": "rm -f spanner-theme-*.zip && cd .. && d=$(date +%s) && cp -a spanner/ spanner-$d && sed -i '/^Version: / s/$/-'$d'/' spanner-$d/style.css && zip -r9 spanner/spanner-theme-$d.zip spanner-$d/ -x \\*node_modules\\* -x \\*.git\\* -x \\*spanner-$d/src\\* -x \\*.zip\\* && rm -rf spanner-$d/",
+		"bundle-simple": "rm -f spanner-theme-*.zip && cd .. && d=$(date +%s) && cp spanner/style.css spanner/style-old.css && sed -i '/^Version: / s/$/-'$d'/' spanner/style.css && zip -r -9 spanner/spanner-theme-$d.zip spanner/ -x\\*-old\\* -x \\*node_modules\\* -x \\*.git\\* -x \\*spanner/src\\* -x \\*.zip\\* && mv -f spanner/style-old.css spanner/style.css && echo '/wp-content/themes/spanner/spanner-theme-'$d'.zip'",
+		"bundle-tagged": "rm -f spanner-theme-*.zip && cd .. && d=$(date +%s) && cp -a spanner/ spanner-$d && sed -i '/^Version: / s/$/-'$d'/' spanner-$d/style.css && zip -r9 spanner/spanner-theme-$d.zip spanner-$d/ -x \\*node_modules\\* -x \\*.git\\* -x \\*spanner-$d/src\\* -x \\*.zip\\* && rm -rf spanner-$d/ && echo '/wp-content/themes/spanner/spanner-theme-'$d'.zip',
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

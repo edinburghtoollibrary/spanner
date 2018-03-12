@@ -76,7 +76,14 @@ add_filter( 'get_header_image_tag', function ( $html, $header, $attr ) {
 }, 10, 3 );
 
 add_filter( 'wp_head', function () {
-	$custom_colors = get_post_custom_values( 'etl_page_primary_color' );
+	$key = 'etl_page_primary_color';
+	$custom_colors = get_post_custom_values( $key );
+
+	if ( empty( $custom_colors ) ) {
+		$parent_id = wp_get_post_parent_id( get_the_ID() );
+		$custom_colors = get_post_custom_values( $key, $parent_id );
+	}
+
 	if ( ! empty( $custom_colors ) ) {
 		?><style>:root { --color-primary: <?php echo reset( $custom_colors ); ?> }</style><?php
 	}
