@@ -76,15 +76,30 @@ add_filter( 'get_header_image_tag', function ( $html, $header, $attr ) {
 }, 10, 3 );
 
 add_filter( 'wp_head', function () {
-	$key = 'etl_page_primary_color';
-	$custom_colors = get_post_custom_values( $key );
+	// custom page colors
+	// https://webaim.org/resources/contrastchecker/
+	$fields = get_post_custom();
 
-	if ( empty( $custom_colors ) ) {
-		$parent_id = wp_get_post_parent_id( get_the_ID() );
-		$custom_colors = get_post_custom_values( $key, $parent_id );
+	if ( empty( $fields['etl_page_primary_color'] ) ) {
+		$fields = get_post_custom( wp_get_post_parent_id( get_the_ID() ) );
 	}
 
-	if ( ! empty( $custom_colors ) ) {
-		?><style>:root { --color-primary: <?php echo reset( $custom_colors ); ?> }</style><?php
+	if ( ! empty( $fields['etl_page_primary_color'] ) ) {
+		$primary_color = $fields['etl_page_primary_color'];
+		$link_color = $fields['etl_page_link_color'] ?: $primary_color;
+		$headings_color = $fields['etl_page_headings_color'] ?: $primary_color;
+
+		?>
+		<style>
+		:root {
+			--color-primary: <?php echo reset( $primary_color ); ?>;
+			--link-color: <?php echo reset( $link_color ); ?>;
+			--headings-color: <?php echo reset( $headings_color ); ?>;
+			<?php if ( $headings_color != $primary_color ) : ?>
+				--link-text-decoration: underline;
+			<?php endif; ?>
+		}
+		</style>
+		<?php
 	}
 } );

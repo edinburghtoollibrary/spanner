@@ -8,25 +8,10 @@
 	--font-weight: 300;
 	--font-weight-light: 100;
 
-	--color-home: #fe9790;
-	--color-about: #fbc718;
-	--color-bam: #0fcc73;
-	--color-borrow: #ff683a;
-	--color-donate: #78e1d9;
-	--color-vision: #;
-	--color-workshop: #;
-	--color-hire: #;
-	--color-involved: #a6d874;
-	--color-team: #d8a7ce;
-	--color-story: #b2adcc;
-	--color-tfl: #ceb779;
-
-	--color-primary: var(--color-home);
-	--color-primary-largetext-wcagaa: #fe5e52;
-	--color-primary-text-wcagaa: #e91101;
-
-	--link-color: var(--color-primary-text-wcagaa);
-	--headings-color: var(--color-primary-largetext-wcagaa);
+    /* home */
+	--color-primary: #fe9790;
+	--link-color: #fe5e52; /* WCAG AA 4.5:1 */
+	--headings-color: #e91101; /* WCAG AA large text 3:1 */
 
 	--component-border-radius: 0;
 	--rail-width: 100px;
