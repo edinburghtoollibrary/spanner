@@ -22,8 +22,11 @@
 	--color-tfl: #ceb779;
 
 	--color-primary: var(--color-home);
+	--color-primary-largetext-wcagaa: #fe5e52;
+	--color-primary-text-wcagaa: #e91101;
 
-	--link-color: var(--color-primary);
+	--link-color: var(--color-primary-text-wcagaa);
+	--headings-color: var(--color-primary-largetext-wcagaa);
 
 	--component-border-radius: 0;
 	--rail-width: 100px;

@@ -1,7 +1,7 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
-	margin: 5px 20px 20px 0;
+	margin: 0;
 }
 
 .aligncenter,
@@ -26,7 +26,7 @@ a img.alignright {
 }
 
 a img.alignnone {
-	margin: 5px 20px 20px 0;
+	margin: 0;
 }
 
 a img.alignleft {
@@ -49,7 +49,7 @@ a img.aligncenter {
 }
 
 .wp-caption.alignnone {
-	margin: 5px 20px 20px 0;
+	margin: 0;
 }
 
 .wp-caption.alignleft {
