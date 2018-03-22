@@ -95,9 +95,6 @@ add_filter( 'wp_head', function () {
 			--color-primary: <?php echo reset( $primary_color ); ?>;
 			--link-color: <?php echo reset( $link_color ); ?>;
 			--headings-color: <?php echo reset( $headings_color ); ?>;
-			<?php if ( $headings_color != $primary_color ) : ?>
-				--link-text-decoration: underline;
-			<?php endif; ?>
 		}
 		</style>
 		<?php
