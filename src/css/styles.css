@@ -22,4 +22,5 @@
 @import url('theme-variables.css');
 
 @import url('wp-core.css');
+@import url('wp-blocks.css');
 @import url('theme.css');
