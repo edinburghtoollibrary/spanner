@@ -19,5 +19,5 @@
 	};
 
 	document.body.addEventListener('click', handleClickMenuToggle);
-	document.body.addEventListener('touchstart', handleClickMenuToggle);
+	//document.body.addEventListener('touchstart', handleClickMenuToggle);
 })();
