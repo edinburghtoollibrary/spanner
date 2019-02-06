@@ -8,9 +8,9 @@
 	--font-weight: 300;
 	--font-weight-light: 100;
 
-    --headings-font-weight: 300;
+	--headings-font-weight: 300;
 
-    /* home */
+	/* home */
 	--color-primary: #fe9790;
 	--link-color: #fe5e52; /* WCAG AA 4.5:1 */
 	--headings-color: #e91101; /* WCAG AA large text 3:1 */
@@ -21,14 +21,14 @@
 }
 
 .page {
-  /* headings on pages should scale with their surroundings */
-  --headings-font-size-h1: 2.5em;
-  --headings-font-size-h2: 2em;
-  --headings-font-size-h3: 1.75em;
-  --headings-font-size-h4: 1.5em;
-  --headings-font-size-h5: 1.25em;
-  --headings-font-size-h6: 1em;
+	/* headings on pages should scale with their surroundings */
+	--headings-font-size-h1: 2.5em;
+	--headings-font-size-h2: 2em;
+	--headings-font-size-h3: 1.75em;
+	--headings-font-size-h4: 1.5em;
+	--headings-font-size-h5: 1.25em;
+	--headings-font-size-h6: 1em;
 
-  --headings-margin-top: 1em;
-  --headings-margin-bottom: 1em;
+	--headings-margin-top: 1em;
+	--headings-margin-bottom: 1em;
 }
