@@ -1,6 +1,20 @@
+html, body {
+	overflow-x: hidden;
+}
 .page .site-content {
 	font-size: 1.55rem;
 	min-height: 100vh;
+}
+.page h2,
+.page h3,
+.page h4,
+.page h5 {
+	margin: var(--headings-margin-bottom) 0;
+}
+.page .wp-block-column h3 {
+	font-size: 1.1em;
+	font-weight: 500;
+	color: inherit;
 }
 
 .site {
@@ -47,7 +61,7 @@ body.is-menu-active .site-content {
 }
 .site-header .menu-toggle:before {
 	content: "";
-	display: inline-block;
+	display: block;
 	background-image: repeating-linear-gradient(black, black 1px, transparent 1px, transparent 7px);
 	width: 19px;
 	height: 16px;
@@ -55,7 +69,7 @@ body.is-menu-active .site-content {
 body.is-menu-active .site-header .menu-toggle:before {
 	content: "╳";
 	background-image: none;
-	font-size: .8em;
+	font-size: 1.2rem;
 }
 .site-header .menu-toggle:hover {
 	color: var(--color-white);
@@ -106,6 +120,7 @@ body.is-menu-active .site-header .menu-toggle:before {
 	text-align: center;
 	padding: .5em 0;
 }
+.front .entry-header .entry-title,
 .home .entry-header .entry-title,
 .entry-header .search-form {
 	display: none;
@@ -170,7 +185,7 @@ body.is-menu-active .site-header .menu-toggle:before {
 		left: auto;
 		align-self: start;
 		height: auto;
-		font-size: 2em;
+		font-size: .8em;
 		line-height: inherit;
 		margin-top: .5em;
 	}

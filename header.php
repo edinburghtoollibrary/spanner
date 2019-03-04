@@ -25,6 +25,7 @@
 	<!-- a href="#menu" class="menu-link">☰</a -->
 		<header id="masthead" class="site-header">
 			<button class="button-link menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				Menu
 			</button>
 
 			<?php $title_tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
