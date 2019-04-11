@@ -15,14 +15,14 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 			?>
-			<header class="page-header">
-				<h1 class="page-title"><?php
+			<header class="entry-header">
+				<h1 class="entry-title"><?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search for: %s', 'spanner' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
 				<?php the_header_image_tag(); ?>
 				<?php get_search_form(); ?>
-			</header><!-- .page-header -->
+			</header><!-- .entry-header -->
 
 			<?php
 			// Start the Loop
