@@ -13,6 +13,8 @@ function spanner_scripts() {
 
 	wp_enqueue_style( 'spanner-styles', path_join( $template_uri, 'css/styles.css' ) );
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
+	#wp_enqueue_style( 'ionicons-style', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), '2.0.1' );
+	wp_enqueue_style( 'icomoon-linearicons-style', 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css', array(), '1.0.0' );
 
 	#wp_enqueue_script( 'spanner-navigation',
 	#		path_join( $template_uri, 'js/navigation.js' ),
