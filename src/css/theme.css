@@ -24,8 +24,10 @@ html, body {
 .page .wp-block-columns.align-items-flex-end {
 	align-items: flex-end;
 }
-.page .wp-block-column .two-columns img {
-	max-width: calc(200% + 32px + 32px);
+@media only screen and (min-width: 600px) {
+	.page .wp-block-column .two-columns img {
+		max-width: calc(200% + 32px + 32px);
+	}
 }
 .page .wp-block-column .wp-block-media-text {
 	align-items: self-end;
@@ -33,6 +35,9 @@ html, body {
 .page .wp-block-column .wp-block-media-text p {
 	margin: 0;
 	line-height: 1.3;
+}
+.attachment-post-thumbnail {
+	margin-bottom: 1em;
 }
 
 .site {
@@ -145,25 +150,31 @@ body:not(.is-menu-active) .menu-toggle:hover {
 	white-space: nowrap;
 }
 .search-form .search-field {
-	transition: 0.33s width;
+	display: inline-block;
 	width: 10em;
-	margin-right: -1.75em;
+	margin-right: -2em;
 	padding-right: 1.75em;
+	transition: 0.33s width;
 	font-size: inherit;
-	z-index: -5;
 }
-.search-form .search-field:not(:focus) {
+body:not(.search-no-results) .search-form:not(:focus-within) .search-field {
 	width: 1.75em;
 	opacity: 0;
 	transition: .33s width, 0.1s opacity;
 	transition-delay: 0s, .23s;
-	z-index: 5;
+}
+@supports (ie/edge:yes) {
+	body:not(.search-no-results) .search-form .search-field:not(:focus) {
+		width: 1.75em;
+		opacity: 0;
+		transition: .33s width, 0.1s opacity;
+		transition-delay: 0s, .23s;
+	}
 }
 .search-form .search-submit {
 	border: none;
 	vertical-align: middle;
 	background: none;
-	padding: 0 .5em 0 0;
 }
 
 .entry-header {
