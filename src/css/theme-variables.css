@@ -8,12 +8,11 @@
 	--font-weight: 300;
 	--font-weight-light: 100;
 
+	--headings-font-family: 'Bebas Neue', cursive;
 	--headings-font-weight: 300;
 
 	/* home */
-	--color-primary: #fe9790;
-	--link-color: #fe5e52; /* WCAG AA 4.5:1 */
-	--headings-color: #e91101; /* WCAG AA large text 3:1 */
+	--color-primary: #fbeb3b;
 
 	--component-border-radius: 0;
 	--rail-width: 100px;

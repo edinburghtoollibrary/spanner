@@ -6,6 +6,7 @@
 function spanner_scripts() {
 	$template_uri = get_template_directory_uri();
 
+	wp_enqueue_style( 'font-google-bebas', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' );
 	wp_enqueue_style( 'font-google-heebo', 'https://fonts.googleapis.com/css?family=Heebo:100,300,400,700' );
 	#wp_enqueue_style( 'font-google-lato', 'https://fonts.googleapis.com/css?family=Lato:300,700' );
 	#wp_enqueue_style( 'font-google-palanquin', 'https://fonts.googleapis.com/css?family=Palanquin:300,700' );
