@@ -20,9 +20,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
 
-	<!-- a href="#menu" class="menu-link">☰</a -->
+		<!-- a href="#menu" class="menu-link">☰</a -->
 		<header id="masthead" class="site-header">
 			<button class="button-link menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				Menu
