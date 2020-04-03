@@ -6,10 +6,6 @@ html, body {
 	background-color: var(--color-primary);
 }
 
-.page .site-content {
-	font-size: 1.55rem;
-	min-height: 100vh;
-}
 .page h2,
 .page h3,
 .page h4,
@@ -41,7 +37,7 @@ html, body {
 }
 
 .site {
-	max-width: 1440px;
+	max-width: 1080px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -138,12 +134,43 @@ body:not(.is-menu-active) .menu-toggle:hover {
 }
 .site-footer,
 .site-content {
+	font-size: 1.55rem;
+}
+.site-content {
 	position: relative;
 	left: 0;
 	transition: .33s left;
+	min-height: 100vh;
 	max-width: calc(100% - 20px);
 	width: var(--breakpoint-lg);
 	margin: 0 auto;
+}
+.entry-content a[href] {
+	background: linear-gradient(transparent 73%, var(--color-primary) 73%);
+	padding: 0;
+	margin: 0;
+	transition: all .2s;
+	/*
+	text-shadow: 0 2px 0 white,
+			0 -2px 0 white,
+			2px 0 0 white,
+			2px 2px 0 white,
+			2px -2px 0 white,
+			-2px 0 0 white,
+			-2px 2px 0 white,
+			-2px -2px 0 white;
+	text-shadow:
+			0.06em 0.06em 0 white,
+			0.06em -0.06em 0 white,
+			-0.06em 0.06em 0 white,
+			-0.06em -0.06em 0 white;
+	/**/
+}
+.entry-content a[href]:hover {
+	background: var(--color-primary);
+	text-shadow: none;
+	padding: 0 0.35em;
+	margin: 0 -0.35em;
 }
 
 .search-form {

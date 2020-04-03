@@ -17,6 +17,12 @@
 	--component-border-radius: 0;
 	--rail-width: 100px;
 	--rail-width-mobile: 250px;
+
+	/* links */
+	--link-color: black;
+	--link-text-decoration: none;
+	--link-color-hover: var(--link-color);
+	--link-text-decoration-hover: var(--link-text-decoration);
 }
 
 .page {
